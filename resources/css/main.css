@@ -1,0 +1,167 @@
+body {
+    margin: 0px;
+}
+
+/* Navigation Bar */
+.nav {
+    top: -250px;
+    height: 50px;
+    width: 100%;
+    position: relative;
+}
+
+.nav > .nav-btn {
+    display: none;
+}
+
+.nav > .nav-links {
+    display: inline;
+    font-size: 18px;
+}
+
+.nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 22px;
+
+    /* Transition out of transperency */
+    -webkit-transition: color 1s ease-out;
+    -moz-transition: color 1s ease-out;
+    -o-transition: color 1s ease-out;
+    transition: color 1s ease-out;
+}
+
+/* When navigation link is hovered over change transperency of link */
+.nav > .nav-links > a:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+.nav > #nav-check {
+    display: none;
+}
+
+hr {
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+
+    /* Transition out of transperency */
+    -webkit-transition: border-color 1s ease-out;
+    -moz-transition: border-color 1s ease-out;
+    -o-transition: border-color 1s ease-out;
+    transition: border-color 1s ease-out;
+}
+
+/* When navigation link is hovered over change transperency of hr */
+a:hover hr {
+    border-color: rgba(255, 255, 255, 1);
+}
+
+@media (max-width: 600px) {
+    .nav > .nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+
+    .nav > .nav-btn > label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+    }
+    
+    .nav > .nav-btn > label:hover,
+    .nav #nav-check:checked ~ .nav-btn > label {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    
+    .nav > .nav-btn > label > span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid #eee;
+    }
+    
+    .nav > .nav-links {
+        position: absolute;
+        display: block;
+        width: 100%;
+        background-color: #333;
+        height: 0px;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 50px;
+        left: 0px;
+    }
+    
+    .nav > .nav-links > a {
+        display: block;
+        width: 100%;
+    }
+    
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+        height: 0px;
+    }
+    
+    .nav > #nav-check:checked ~ .nav-links {
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+    }
+} /* End of Navigation Bar */
+
+.top-container,
+.bottom-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    color: rgba(#2980b9, 0.5);
+}
+
+.top-container {
+    min-height: 60vh;
+    background: #4d83b9;
+}
+
+.bottom-container {
+    min-height: 60vh;
+    background: #32465c;
+}
+
+/* Dividers */
+.scallop-down {
+    height: 100px;
+    width: 100%;
+    background: -webkit-gradient(
+        radial,
+        50% 0,
+        10,
+        50% 0,
+        40,
+        from(#4d83b9),
+        color-stop(0.49, #4d83b9),
+        color-stop(0.51, #32465c),
+        to(#32465c)
+    );
+    -webkit-background-size: 49px 100%;
+}
+
+.scallop-up {
+    height: 100px;
+    width: 100%;
+    background: -webkit-gradient(
+        radial,
+        50% 100%,
+        10,
+        50% 100%,
+        40,
+        from(#4d83b9),
+        color-stop(0.49, #4d83b9),
+        color-stop(0.51, #32465c),
+        to(#32465c)
+    );
+    -webkit-background-size: 49px 100%;
+} /* End of Dividers */
