@@ -67,7 +67,6 @@ a:hover hr {
 .bottom-container {
     display: flex;
     justify-content: space-around;
-    min-height: 60vh;
     background: var(--bgDarkBlue);
 }
 
@@ -118,4 +117,68 @@ h2 {
 #tools {
     display: flex;
     flex-direction: column;
+}
+
+/* Progress Bars */
+#skills > ul,
+#tools > ul {
+    list-style: none;
+    padding: 0;
+}
+
+#tools ul li,
+#skills ul li {
+    width: 375px;
+    overflow: hidden;
+    height: 43px;
+    line-height: 43px;
+    background: #46484c;
+    border-radius: 5px;
+    margin: 0 0 27px;
+}
+
+#tools ul li span,
+#skills ul li span {
+    background: var(--bgLightBlue);
+    color: #fff;
+    text-transform: uppercase;
+    display: block;
+    font-family: 'novecentosanswide';
+    font-weight: normal;
+    font-size: 18px;
+    padding: 0 0 0 20px;
+}
+
+/* Skills Progress */
+#html-prog {
+    width: 100%;
+}
+
+#css-prog {
+    width: 65%;
+}
+
+#js-prog {
+    width: 75%;
+}
+
+#jquery-prog {
+    width: 60%;
+}
+
+/* Tools Progress */
+#vscode-prog {
+    width: 90%;
+}
+
+#eclipse-prog {
+    width: 70%;
+}
+
+#github-prog {
+    width: 85%;
+}
+
+#netbeans-prog {
+    width: 65%;
 }
