@@ -46,56 +46,61 @@
             alt="Code example for background"
         />
         <header>
-        <!-- Navigation Bar -->
-        <nav id="nav-bar" class="navbar fixed-top navbar-expand-md">
-            <!-- Button While Collapsed -->
-            <button
-                type="button"
-                class="navbar-toggler navbar-dark"
-                data-toggle="collapse"
-                data-target="#navbarCollapse"
-            >
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <!-- Navigation Links -->
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav mx-auto">
-                    <a
-                        id="home-link"
-                        href="#home"
-                        class="nav-item nav-link"
-                        >Home<hr></a
-                    >
-                    <a
-                        id="skills-link"
-                        href="#skills"
-                        class="nav-item nav-link"
-                        >Skills<hr></a
-                    >
-                    <a
-                        id="portfolio-link"
-                        href="#portfolio"
-                        class="nav-item nav-link"
-                        >Portfolio<hr></a
-                    >
-                    <a
-                        id="contact-link"
-                        href="#contact"
-                        class="nav-item nav-link"
-                        >Contact<hr></a
-                    >
+            <!-- Navigation Bar -->
+            <nav id="nav-bar" class="navbar fixed-top navbar-expand-md">
+                <!-- Button While Collapsed -->
+                <button
+                    type="button"
+                    class="navbar-toggler navbar-dark"
+                    data-toggle="collapse"
+                    data-target="#navbarCollapse"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Navigation Links -->
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto">
+                        <a id="home-link" href="#home" class="nav-item nav-link"
+                            >Home
+                            <hr
+                        /></a>
+
+                        <a
+                            id="skills-link"
+                            href="#skills"
+                            class="nav-item nav-link"
+                            >Skills
+                            <hr
+                        /></a>
+
+                        <a
+                            id="portfolio-link"
+                            href="#portfolio"
+                            class="nav-item nav-link"
+                            >Portfolio
+                            <hr
+                        /></a>
+
+                        <a
+                            id="contact-link"
+                            href="#contact"
+                            class="nav-item nav-link"
+                            >Contact
+                            <hr
+                        /></a>
+                    </div>
                 </div>
-            </div>
-        </nav>
-        <!-- End of Navigation Bar -->
+            </nav>
+            <!-- End of Navigation Bar -->
         </header>
 
+        <!-- Home Section -->
         <div id="home">
             <div id="nav-lines">
-                <hr id="home-line" class="nav-line active">
-                <hr id="skills-line" class="nav-line">
-                <hr id="portfolio-line" class="nav-line">
-                <hr id="contact-line" class="nav-line">
+                <hr id="home-line" class="nav-line active" />
+                <hr id="skills-line" class="nav-line" />
+                <hr id="portfolio-line" class="nav-line" />
+                <hr id="contact-line" class="nav-line" />
             </div>
             <div id="page-title">
                 <h1>Ryan Maxie</h1>
@@ -109,6 +114,58 @@
                 />
             </div>
         </div>
+
+        <!-- Skills Section -->
+        <div id="skills">
+            <div id="dev-skills" class="animation-element slide-right">
+                <h2>Development Skills:</h2>
+                <!-- Progress Bars -->
+                <ul>
+                    <li>
+                        <span id="html-prog">HTML</span>
+                    </li>
+                    <li>
+                        <span id="css-prog">CSS</span>
+                    </li>
+                    <li>
+                        <span id="js-prog">JavaScript</span>
+                    </li>
+                    <li>
+                        <span id="jquery-prog">jQuery</span>
+                    </li>
+                </ul>
+            </div>
+            <div id="dev-tools" class="animation-element slide-left">
+                <h2>Development Tools:</h2>
+                <!-- Progress Bars -->
+                <ul>
+                    <li>
+                        <span id="vscode-prog">VS Code</span>
+                    </li>
+                    <li>
+                        <span id="eclipse-prog">Eclipse</span>
+                    </li>
+                    <li>
+                        <span id="github-prog">Github</span>
+                    </li>
+                    <li>
+                        <span id="netbeans-prog">NetBeans</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Images for background -->
+        <img
+            id="bg-code-center"
+            src="resources/images/bgCode.png"
+            alt="Code example for background"
+        />
+        <img
+            id="bg-code-bottom-left"
+            src="resources/images/bgCode.png"
+            alt="Code example for background"
+        />
 
         <!-- jQuery Library -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

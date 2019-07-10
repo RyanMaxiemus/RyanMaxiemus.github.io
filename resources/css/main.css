@@ -1,21 +1,20 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 
 /* Set page margin and padding, fonts & background image */
 body {
     margin: 0;
     padding: 0;
     color: white;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     background-image: url(../images/background.jpg);
 
-
-
-
-
-
-
-
-
+    /*
+     *
+     *
+     * REMOVE HEIGHT
+     *
+     *
+     */
 
     height: 5000px;
 }
@@ -25,9 +24,11 @@ body {
     position: absolute;
     top: 100px;
     left: 725px;
-    
-    animation: slideInFromTop 1s ease-out 0s 1;
+
     -webkit-animation: slideInFromTop 1s ease-out 0s 1;
+    -moz-animation: slideInFromTop 1s ease-out 0s 1;
+    -o-animation: slideInFromTop 1s ease-out 0s 1;
+    animation: slideInFromTop 1s ease-out 0s 1;
 }
 
 #bg-code-bottom-right {
@@ -240,13 +241,12 @@ body {
     border-color: rgba(255, 255, 255, 1);
     width: 35px;
 
-
     /*
     *
     * CHECK THIS
     *
     */
-    
+
     /* Transition to full width */
     -webkit-transition: width 1s ease-out;
     -moz-transition: width 1s ease-out;
@@ -254,7 +254,9 @@ body {
     transition: width 1s ease-out;
 }
 
-/* Home Section */
+/* 
+ * Home Section 
+ */
 #home {
     display: flex;
     justify-content: center;
@@ -292,4 +294,166 @@ body {
 #page-title > p {
     text-align: center;
     font-size: 22px;
+}
+
+/* 
+ * Skills Section 
+ */
+
+/* Background Images */
+#bg-code-center {
+    position: absolute;
+    z-index: -1;
+    top: 1200px;
+    left: 725px;
+}
+
+#skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    top: 600px;
+}
+
+#dev-skills,
+#dev-tools {
+    display: flex;
+    flex-direction: column;
+
+    background-color: #24252a;
+
+    border: white 1px solid;
+    padding: 15px;
+}
+
+/* Progress Bars */
+#dev-skills > ul,
+#dev-tools > ul {
+    list-style: none;
+    padding: 0;
+}
+
+#dev-tools ul li,
+#dev-skills ul li {
+    width: 375px;
+    overflow: hidden;
+    height: 43px;
+    line-height: 43px;
+    background: #46484c;
+    border-radius: 5px;
+    margin: 0 0 27px;
+}
+
+#dev-tools ul li span,
+#dev-skills ul li span {
+    background: var(--bgLightBlue);
+    color: #fff;
+    text-transform: uppercase;
+    display: block;
+    font-family: "novecentosanswide";
+    font-weight: normal;
+    font-size: 18px;
+    padding: 0 0 0 20px;
+}
+
+/* Skills Progress */
+#html-prog {
+    width: 100%;
+}
+
+#css-prog {
+    width: 65%;
+}
+
+#js-prog {
+    width: 75%;
+}
+
+#jquery-prog {
+    width: 60%;
+}
+
+/* Tools Progress */
+#vscode-prog {
+    width: 90%;
+}
+
+#eclipse-prog {
+    width: 70%;
+}
+
+#github-prog {
+    width: 85%;
+}
+
+#netbeans-prog {
+    width: 65%;
+}
+
+
+
+
+
+
+
+
+
+
+
+.animation-element {
+    position: relative;
+}
+
+.animation-element.slide-right {
+    opacity: 0;
+
+    -moz-transition: all 500ms linear;
+    -webkit-transition: all 500ms linear;
+    -o-transition: all 500ms linear;
+    transition: all 500ms linear;
+
+    -moz-transform: translate3d(-1000px, 0px, 0px);
+    -webkit-transform: translate3d(-1000px, 0px, 0px);
+    -o-transform: translate(-1000px, 0px);
+    -ms-transform: translate(-1000px, 0px);
+    transform: translate3d(-1000px, 0px, 0px);
+}
+
+.animation-element.slide-right.in-view {
+    opacity: 1;
+    
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
+}
+
+.animation-element.slide-left {
+    opacity: 0;
+    display: none;
+
+    -moz-transition: all 500ms linear;
+    -webkit-transition: all 500ms linear;
+    -o-transition: all 500ms linear;
+    transition: all 500ms linear;
+
+    -moz-transform: translate3d(540px, 0px, 0px);
+    -webkit-transform: translate3d(540px, 0px, 0px);
+    -o-transform: translate(540px, 0px);
+    -ms-transform: translate(540px, 0px);
+    transform: translate3d(540px, 0px, 0px);
+}
+
+.animation-element.slide-left.in-view {
+    opacity: 1;
+    
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
 }
