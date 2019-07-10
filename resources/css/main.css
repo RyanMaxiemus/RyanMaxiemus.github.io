@@ -415,11 +415,11 @@ body {
     -o-transition: all 500ms linear;
     transition: all 500ms linear;
 
-    -moz-transform: translate3d(-1000px, 0px, 0px);
-    -webkit-transform: translate3d(-1000px, 0px, 0px);
-    -o-transform: translate(-1000px, 0px);
-    -ms-transform: translate(-1000px, 0px);
-    transform: translate3d(-1000px, 0px, 0px);
+    -moz-transform: translate3d(-540px, 0px, 0px);
+    -webkit-transform: translate3d(-540px, 0px, 0px);
+    -o-transform: translate(-540px, 0px);
+    -ms-transform: translate(-540px, 0px);
+    transform: translate3d(-540px, 0px, 0px);
 }
 
 .animation-element.slide-right.in-view {
@@ -434,7 +434,6 @@ body {
 
 .animation-element.slide-left {
     opacity: 0;
-    display: none;
 
     -moz-transition: all 500ms linear;
     -webkit-transition: all 500ms linear;

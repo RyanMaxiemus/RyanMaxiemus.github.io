@@ -68,6 +68,7 @@ $(document).ready(function() {
     // Trigger a scroll event when page is loaded.
     $window.trigger("scroll");
 
+    // Check to see if an element that needs to be animated is in view.
     function checkIfInView() {
         let windowHeight = $window.height();
         let windowTopPosition = $window.scrollTop();
@@ -80,15 +81,14 @@ $(document).ready(function() {
             let elementBottomPosition = elementTopPosition + elementHeight;
 
             // Check to see if this element is in view.
-            if (
-                elementBottomPosition >= windowTopPosition &&
-                elementTopPosition <= windowBottomPosition
-            ) {
+            if ((elementBottomPosition >= windowTopPosition) &&
+                (elementTopPosition <= windowBottomPosition)) {
                 $element.addClass("in-view");
                 if ($element[0].id === "dev-skills") {
                     fixNavLines("skills");
                 }
-            } else {
+            } 
+            else {
                 $element.removeClass("in-view");
             }
         });
@@ -102,12 +102,11 @@ $(document).ready(function() {
             document.getElementById("contact-line")
         ];
 
-        for(let i = 0; i < eleArr.length; i++) {
+        for (let i = 0; i < eleArr.length; i++) {
             eleArr[i].classList.remove("active");
         }
 
         if (elementID === "skills") {
-
             document.getElementById("skills-line").classList.add("active");
         }
     }
