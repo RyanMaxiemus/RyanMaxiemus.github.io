@@ -8,107 +8,126 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Ryan Maxie</title>
-        <meta name="description" content="Ryan Maxie Web Developer Portfolio" />
+        <title>Ryan Maxie Portfolio</title>
+        <meta name="description" content="Ryan Maxie's Portfolio" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Latest compiled and minified Bootstrap 4 CSS -->
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous"
+        />
+
+        <!-- Styles for site -->
         <link rel="stylesheet" href="resources/css/main.css" />
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">
                 You are using an <strong>outdated</strong> browser. Please
-                <a href="#">upgrade your browser</a> to improve your experience.
+                <a href="https://www.google.com/chrome/"
+                    >upgrade your browser</a
+                >
+                to improve your experience.
             </p>
         <![endif]-->
 
-        <div class="container">
-            <div class="top-container">
-                <header>
-                    <div class="nav">
-                        <div class="nav-links">
-                            <a href="#home"
-                                >Home
-                                <hr class="link-line"
-                            /></a>
-                            <a href="#skills"
-                                >Skills
-                                <hr class="link-line"
-                            /></a>
-                            <a href="#portfolio"
-                                >Portfolio
-                                <hr class="link-line"
-                            /></a>
-                            <a href="#contact"
-                                >Contact
-                                <hr class="link-line"
-                            /></a>
-                        </div>
-                    </div>
-                </header>
-                <div>
-                    <h1>Ryan Maxie</h1>
-                </div>
-                <div>
-                    <h2>Professional Web Developer</h2>
+        <!-- Images for background -->
+        <img
+            id="bg-code-top-center"
+            src="resources/images/bgCode.png"
+            alt="Code example for background"
+        />
+        <img
+            id="bg-code-bottom-right"
+            src="resources/images/bgCode.png"
+            alt="Code example for background"
+        />
+        <header>
+        <!-- Navigation Bar -->
+        <nav id="nav-bar" class="navbar fixed-top navbar-expand-md">
+            <!-- Button While Collapsed -->
+            <button
+                type="button"
+                class="navbar-toggler navbar-dark"
+                data-toggle="collapse"
+                data-target="#navbarCollapse"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navigation Links -->
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav mx-auto">
+                    <a
+                        id="home-link"
+                        href="#home"
+                        class="nav-item nav-link"
+                        >Home<hr></a
+                    >
+                    <a
+                        id="skills-link"
+                        href="#skills"
+                        class="nav-item nav-link"
+                        >Skills<hr></a
+                    >
+                    <a
+                        id="portfolio-link"
+                        href="#portfolio"
+                        class="nav-item nav-link"
+                        >Portfolio<hr></a
+                    >
+                    <a
+                        id="contact-link"
+                        href="#contact"
+                        class="nav-item nav-link"
+                        >Contact<hr></a
+                    >
                 </div>
             </div>
-            <!-- begin Separator -->
-            <div class="scallop-down"></div>
-            <!-- end Separator -->
-            <div class="bottom-container">
-                <div id="skills">
-                    <h2>Development Skills:</h2>
-                    <ul>
-                        <li>
-                            <span id="html-prog">HTML</span>
-                        </li>
-                        <li>
-                            <span id="css-prog">CSS</span>
-                        </li>
-                        <li>
-                            <span id="js-prog">JavaScript</span>
-                        </li>
-                        <li>
-                            <span id="jquery-prog">jQuery</span>
-                        </li>
-                    </ul>
-                </div>
-                <div id="tools">
-                    <h2>Development Tools:</h2>
-                    <ul>
-                        <li>
-                            <span id="vscode-prog">VS Code</span>
-                        </li>
-                        <li>
-                            <span id="eclipse-prog">Eclipse</span>
-                        </li>
-                        <li>
-                            <span id="github-prog">Github</span>
-                        </li>
-                        <li>
-                            <span id="netbeans-prog">NetBeans</span>
-                        </li>
-                    </ul>
-                </div>
+        </nav>
+        <!-- End of Navigation Bar -->
+        </header>
+
+        <div id="home">
+            <div id="nav-lines">
+                <hr id="home-line" class="nav-line active">
+                <hr id="skills-line" class="nav-line">
+                <hr id="portfolio-line" class="nav-line">
+                <hr id="contact-line" class="nav-line">
+            </div>
+            <div id="page-title">
+                <h1>Ryan Maxie</h1>
+                <p>Professional Web Developer</p>
+            </div>
+            <div>
+                <img
+                    id="home-img"
+                    src="resources/images/web-dev.jpg"
+                    alt="Laptop on desk"
+                />
             </div>
         </div>
-        <div class="scallop-up"></div>
-        <div class="top-container"></div>
 
+        <!-- jQuery Library -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <!-- Popper Library -->
         <script
-            src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
             crossorigin="anonymous"
         ></script>
+
+        <!-- Bootstrap 4 Library -->
         <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"
         ></script>
-        <script
-            src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"
-        ></script>
+
+        <!-- Script for site's JavaScript -->
+        <script src="resources/js/main.js"></script>
     </body>
 </html>
