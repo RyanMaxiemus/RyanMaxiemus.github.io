@@ -83,14 +83,29 @@ $(document).ready(function() {
             // Check to see if this element is in view.
             if ((elementBottomPosition >= windowTopPosition) &&
                 (elementTopPosition <= windowBottomPosition)) {
-                $element.addClass("in-view");
+                
+                    // Add in-view class to the element
+                    $element.addClass("in-view");
+
                 if ($element[0].id === "dev-skills") {
-                    fixNavLines("skills");
+                        fixNavLines("skills");
                 }
             } 
+            // REMOVE THIS
+            // REMOVE THIS
+            // REMOVE THIS
+            // REMOVE THIS
             else {
                 $element.removeClass("in-view");
+
+
+                document.getElementById("bg-code-center").classList.remove("in-View");
+                document.getElementById("bg-code-bottom-left").classList.remove("in-View");
             }
+            // REMOVE THIS
+            // REMOVE THIS
+            // REMOVE THIS
+            // REMOVE THIS
         });
     }
 
