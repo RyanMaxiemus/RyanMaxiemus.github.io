@@ -1,4 +1,9 @@
 $(document).ready(function() {
+    /*
+     *
+     * REMOVE THIS TEST CLEAR
+     * 
+     */
     console.clear();
 
     /*
@@ -61,12 +66,34 @@ $(document).ready(function() {
     setInterval(function() {
         if (scrolling) {
             scrolling = false;
-            checkIfInView();
+            onPageScroll();
         }
     }, 250);
 
     // Trigger a scroll event when page is loaded.
     $window.trigger("scroll");
+
+
+    // When the page is scrolled execute these methods.
+    function onPageScroll() {
+        let elem = document.querySelector('body');
+        let bounding = elem.getBoundingClientRect();
+
+
+        /*
+         *
+         * REMOVE THIS TEST
+         * 
+         */
+        console.log(bounding.top);
+
+        // Fix the navigation lines.
+        fixNavLines(bounding.top);
+
+        // Check if an element is in view
+        checkIfInView();
+    }
+
 
     // Check to see if an element that needs to be animated is in view.
     function checkIfInView() {
@@ -80,16 +107,14 @@ $(document).ready(function() {
             let elementTopPosition = $element.offset().top;
             let elementBottomPosition = elementTopPosition + elementHeight;
 
+
+
             // Check to see if this element is in view.
             if ((elementBottomPosition >= windowTopPosition) &&
                 (elementTopPosition <= windowBottomPosition)) {
                 
                     // Add in-view class to the element
                     $element.addClass("in-view");
-
-                if ($element[0].id === "dev-skills") {
-                        fixNavLines("skills");
-                }
             } 
             // REMOVE THIS
             // REMOVE THIS
@@ -109,7 +134,7 @@ $(document).ready(function() {
         });
     }
 
-    function fixNavLines(elementID) {
+    function fixNavLines(top) {
         let eleArr = [
             document.getElementById("home-line"),
             document.getElementById("skills-line"),
@@ -121,8 +146,19 @@ $(document).ready(function() {
             eleArr[i].classList.remove("active");
         }
 
-        if (elementID === "skills") {
+        if (top > -513) {
+            document.getElementById("home-line").classList.add("active");
+        }
+        else if (top <= -513 && top >= -1540) {
             document.getElementById("skills-line").classList.add("active");
         }
+
+        /*
+         *
+         * ADD MORE CONDITIONAL STATEMENTS HERE
+         * 
+         */
     }
 });
+
+

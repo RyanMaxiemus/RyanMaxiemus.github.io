@@ -235,17 +235,17 @@ body {
 .nav-line {
     width: 20px;
     border-color: rgba(255, 255, 255, 0.4);
+
+    /* Transition to full width */
+    -webkit-transition: width 1s ease-out;
+    -moz-transition: width 1s ease-out;
+    -o-transition: width 1s ease-out;
+    transition: width 1s ease-out;
 }
 
 .active {
     border-color: rgba(255, 255, 255, 1);
     width: 35px;
-
-    /*
-    *
-    * CHECK THIS
-    *
-    */
 
     /* Transition to full width */
     -webkit-transition: width 1s ease-out;
