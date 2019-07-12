@@ -2,7 +2,7 @@ $(document).ready(function() {
     /*
      *
      * REMOVE THIS TEST CLEAR
-     * 
+     *
      */
     console.clear();
 
@@ -73,17 +73,15 @@ $(document).ready(function() {
     // Trigger a scroll event when page is loaded.
     $window.trigger("scroll");
 
-
     // When the page is scrolled execute these methods.
     function onPageScroll() {
-        let elem = document.querySelector('body');
+        let elem = document.querySelector("body");
         let bounding = elem.getBoundingClientRect();
-
 
         /*
          *
          * REMOVE THIS TEST
-         * 
+         *
          */
         console.log(bounding.top);
 
@@ -93,7 +91,6 @@ $(document).ready(function() {
         // Check if an element is in view
         checkIfInView();
     }
-
 
     // Check to see if an element that needs to be animated is in view.
     function checkIfInView() {
@@ -107,39 +104,34 @@ $(document).ready(function() {
             let elementTopPosition = $element.offset().top;
             let elementBottomPosition = elementTopPosition + elementHeight;
 
-
-
             // Check to see if this element is in view.
-            if ((elementBottomPosition >= windowTopPosition) &&
-                (elementTopPosition <= windowBottomPosition)) {
+            if (
+                elementBottomPosition >= windowTopPosition &&
+                elementTopPosition <= windowBottomPosition
+            ) {
+                // If the element is a portfolio tile, delay animation.
+                if ($element.hasClass("portfolio-tile")) {
+                    let children = document.getElementById("portfolio")
+                        .children;
+                    let time = 0;
 
-                    // If the element is a portfolio tile set a delay.
-                    if($element.hasClass("portfolio-tile")) {
-                        let children = document.getElementById("portfolio").children;
-                        let time = 0;
-
-                        for(let i = 0; i < children.length; i++) {
-                            setTimeout(function() {
-                                children[i].classList.add("in-view");
-                            }, time);
-                            time += 50;
-                        }
+                    for (let i = 0; i < children.length; i++) {
+                        setTimeout(function() {
+                            children[i].classList.add("in-view");
+                        }, time);
+                        time += 50;
                     }
-                    else {
-                        // Add in-view class to the element
-                        $element.addClass("in-view");
-                    }
-            } 
+                } else {
+                    // Add in-view class to the element
+                    $element.addClass("in-view");
+                }
+            }
             // REMOVE THIS
             // REMOVE THIS
             // REMOVE THIS
             // REMOVE THIS
             else {
                 $element.removeClass("in-view");
-
-
-                document.getElementById("bg-code-center").classList.remove("in-View");
-                document.getElementById("bg-code-bottom-left").classList.remove("in-View");
             }
             // REMOVE THIS
             // REMOVE THIS
@@ -162,20 +154,16 @@ $(document).ready(function() {
 
         if (top > -513) {
             document.getElementById("home-line").classList.add("active");
-        }
-        else if (top <= -513 && top >= -1350) {
+        } else if (top <= -513 && top >= -1350) {
             document.getElementById("skills-line").classList.add("active");
-        }
-        else if (top < -1350 && top >= -2205) {
+        } else if (top < -1350 && top >= -2205) {
             document.getElementById("portfolio-line").classList.add("active");
         }
 
         /*
          *
          * ADD MORE CONDITIONAL STATEMENTS HERE
-         * 
+         *
          */
     }
 });
-
-
