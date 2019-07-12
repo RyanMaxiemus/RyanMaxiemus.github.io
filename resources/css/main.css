@@ -343,6 +343,7 @@ body {
 
     border: white 1px solid;
     padding: 15px;
+    margin: 15px;
 }
 
 /* Progress Bars */
@@ -422,11 +423,11 @@ body {
     -o-transition: all 500ms linear;
     transition: all 500ms linear;
 
-    -moz-transform: translate3d(-540px, 0px, 0px);
-    -webkit-transform: translate3d(-540px, 0px, 0px);
-    -o-transform: translate(-540px, 0px);
-    -ms-transform: translate(-540px, 0px);
-    transform: translate3d(-540px, 0px, 0px);
+    -moz-transform: translate3d(-530px, 0px, 0px);
+    -webkit-transform: translate3d(-530px, 0px, 0px);
+    -o-transform: translate(-530px, 0px);
+    -ms-transform: translate(-530px, 0px);
+    transform: translate3d(-530px, 0px, 0px);
 }
 
 .animation-element.slide-right.in-view {
@@ -447,11 +448,11 @@ body {
     -o-transition: all 500ms linear;
     transition: all 500ms linear;
 
-    -moz-transform: translate3d(540px, 0px, 0px);
-    -webkit-transform: translate3d(540px, 0px, 0px);
-    -o-transform: translate(540px, 0px);
-    -ms-transform: translate(540px, 0px);
-    transform: translate3d(540px, 0px, 0px);
+    -moz-transform: translate3d(530px, 0px, 0px);
+    -webkit-transform: translate3d(530px, 0px, 0px);
+    -o-transform: translate(530px, 0px);
+    -ms-transform: translate(530px, 0px);
+    transform: translate3d(530px, 0px, 0px);
 }
 
 .animation-element.slide-left.in-view {
@@ -506,8 +507,10 @@ body {
 
 .portfolio-tile {
     background-color: var(--main-bg-color);
+    
     width: 400px;
     height: auto;
+    margin: 0 15px 15px;
 
     border: white 1px solid;
 
@@ -526,4 +529,8 @@ body {
 
 .portfolio-tile-title {
     height: 50px;
+}
+
+.portfolio-tile-title > h4{
+    margin-top: 15px;
 }

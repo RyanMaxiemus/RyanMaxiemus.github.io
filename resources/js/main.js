@@ -112,9 +112,23 @@ $(document).ready(function() {
             // Check to see if this element is in view.
             if ((elementBottomPosition >= windowTopPosition) &&
                 (elementTopPosition <= windowBottomPosition)) {
-                
-                    // Add in-view class to the element
-                    $element.addClass("in-view");
+
+                    // If the element is a portfolio tile set a delay.
+                    if($element.hasClass("portfolio-tile")) {
+                        let children = document.getElementById("portfolio").children;
+                        let time = 0;
+
+                        for(let i = 0; i < children.length; i++) {
+                            setTimeout(function() {
+                                children[i].classList.add("in-view");
+                            }, time);
+                            time += 50;
+                        }
+                    }
+                    else {
+                        // Add in-view class to the element
+                        $element.addClass("in-view");
+                    }
             } 
             // REMOVE THIS
             // REMOVE THIS
