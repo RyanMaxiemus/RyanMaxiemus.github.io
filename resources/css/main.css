@@ -507,8 +507,23 @@ body {
 .portfolio-tile {
     background-color: var(--main-bg-color);
     width: 400px;
-    height: 400px;
-
+    height: auto;
 
     border: white 1px solid;
+
+    text-align: center;
+}
+
+.portfolio-tile > a {
+    text-decoration: none;
+    color: white;
+}
+
+.portfolio-img {
+    width: 100%;
+    border-bottom: white 1px solid;
+}
+
+.portfolio-tile-title {
+    height: 50px;
 }
