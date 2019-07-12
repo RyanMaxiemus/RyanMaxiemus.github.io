@@ -33,7 +33,7 @@ $(document).ready(function() {
     $("#portfolio-link").click(function() {
         $("html, body").animate(
             {
-                scrollTop: $("#portfolio").offset().top
+                scrollTop: $("#portfolio").offset().top - 300
             },
             1000
         );

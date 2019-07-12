@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 
+/* Variables */
+:root {
+    --main-bg-color: #24252a;
+}
+
 /* Set page margin and padding, fonts & background image */
 body {
     margin: 0;
@@ -40,6 +45,20 @@ body {
     -moz-animation: slideInFromBottom 1s ease-out 0s 1;
     -o-animation: slideInFromBottom 1s ease-out 0s 1;
     animation: slideInFromBottom 1s ease-out 0s 1;
+}
+
+#bg-code-center {
+    position: absolute;
+    z-index: -1;
+    top: 1200px;
+    left: 725px;
+}
+
+#bg-code-bottom-left {
+    position: absolute;
+    z-index: -1;
+    top: 975px;
+    left: 245px;
 }
 
 /* Animations */
@@ -299,20 +318,10 @@ body {
 /* 
  * Skills Section 
  */
-
-/* Background Images */
-#bg-code-center {
-    position: absolute;
-    z-index: -1;
-    top: 1200px;
-    left: 725px;
-}
-
-#bg-code-bottom-left {
-    position: absolute;
-    z-index: -1;
-    top: 975px;
-    left: 245px;
+#skills-title {
+    position: relative;
+    top: 500px;
+    text-align: center;
 }
 
 #skills {
@@ -330,7 +339,7 @@ body {
     display: flex;
     flex-direction: column;
 
-    background-color: #24252a;
+    background-color: var(--main-bg-color);
 
     border: white 1px solid;
     padding: 15px;
@@ -478,4 +487,28 @@ body {
     -o-transform: translate(0px, 0px);
     -ms-transform: translate(0px, 0px);
     transform: translate3d(0px, 0px, 0px);
+}
+
+/* Portfolio Section */
+#portfolio-title {
+    position: relative;
+    top: 900px;
+    text-align: center;
+}
+
+#portfolio {
+    display: flex;
+    justify-content: center;
+
+    position: relative;
+    top: 1000px;
+}
+
+.portfolio-tile {
+    background-color: var(--main-bg-color);
+    width: 400px;
+    height: 400px;
+
+
+    border: white 1px solid;
 }
