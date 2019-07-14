@@ -12,16 +12,6 @@ body {
     color: white;
     font-family: "Montserrat", sans-serif;
     background-image: url(../images/background.jpg);
-
-    /*
-     *
-     *
-     * REMOVE HEIGHT
-     *
-     *
-     */
-
-    height: 5000px;
 }
 
 /*
@@ -552,4 +542,42 @@ body {
 
 .portfolio-tile-title > h4 {
     margin-top: 15px;
+}
+
+/* Contact Section */
+#contact-title {
+    position: relative;
+    top: 1300px;
+    text-align: center;
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    top: 1400px;
+    padding-bottom: 300px;
+}
+
+#contact > a {
+    color: white;
+    font-weight: bold;
+    margin-top: 75px;
+    font-size: 22px;
+}
+
+.social-links {
+    margin-top: 75px;
+}
+
+.social-links > a {
+    margin: 0 30px;
+}
+
+.fa {
+    color: white;
+    font-size: 42px;
 }

@@ -43,7 +43,7 @@ $(document).ready(function() {
     $("#contact-link").click(function() {
         $("html, body").animate(
             {
-                scrollTop: $("#contact").offset().top
+                scrollTop: $("#contact").offset().top - 400
             },
             1000
         );
@@ -158,6 +158,8 @@ $(document).ready(function() {
             document.getElementById("skills-line").classList.add("active");
         } else if (top < -1350 && top >= -2205) {
             document.getElementById("portfolio-line").classList.add("active");
+        } else {
+            document.getElementById("contact-line").classList.add("active");
         }
 
         /*
