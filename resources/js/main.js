@@ -156,7 +156,7 @@ $(document).ready(function() {
             document.getElementById("home-line").classList.add("active");
         } else if (top <= -513 && top >= -1350) {
             document.getElementById("skills-line").classList.add("active");
-        } else if (top < -1350 && top >= -2205) {
+        } else if (top < -1350 && top >= -2820) {
             document.getElementById("portfolio-line").classList.add("active");
         } else {
             document.getElementById("contact-line").classList.add("active");
