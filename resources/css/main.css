@@ -509,6 +509,12 @@ body {
 #portfolio {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 1000px;
 
     position: relative;
     top: 1000px;
@@ -519,11 +525,15 @@ body {
 
     width: 400px;
     height: auto;
-    margin: 0 15px 15px;
+    margin: 0 15px 30px;
 
     border: white 1px solid;
 
     text-align: center;
+}
+
+#wikipedia-viewer-img {
+    height: 326px;
 }
 
 .portfolio-tile > a {
