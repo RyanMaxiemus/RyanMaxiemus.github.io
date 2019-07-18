@@ -70,6 +70,34 @@ body {
     left: 245px;
 }
 
+#bg-code-port-right {
+    position: absolute;
+    z-index: -1;
+    top: 2500px;
+    left: 1205px;
+}
+
+#bg-code-port-center {
+    position: absolute;
+    z-index: -1;
+    top: 3000px;
+    left: 725px;
+}
+
+/* Contact background code images */
+#bg-code-cont-left {
+    position: absolute;
+    z-index: -1;
+    top: 3400px;
+    left: 245px;
+}
+#bg-code-cont-right {
+    position: absolute;
+    z-index: -1;
+    top: 3800px;
+    left: 1205px;
+}
+
 /* 
  * Animations 
  */
