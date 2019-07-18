@@ -78,13 +78,6 @@ $(document).ready(function() {
         let elem = document.querySelector("body");
         let bounding = elem.getBoundingClientRect();
 
-        /*
-         *
-         * REMOVE THIS TEST
-         *
-         */
-        console.log(bounding.top);
-
         // Fix the navigation lines.
         fixNavLines(bounding.top);
 
@@ -161,11 +154,5 @@ $(document).ready(function() {
         } else {
             document.getElementById("contact-line").classList.add("active");
         }
-
-        /*
-         *
-         * ADD MORE CONDITIONAL STATEMENTS HERE
-         *
-         */
     }
 });
