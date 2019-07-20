@@ -6,10 +6,205 @@
     --flex-direct: row;
 }
 
-
 /*
- * Smaller screens
+ * Media Queries
  */
+/* Large Screens */
+@media(min-width: 1700px) {
+    
+    /* Overlap the title on the home image */
+    #page-title {
+        right: -150px;
+    }
+
+    /*
+     * Background code images 
+     */
+    /* Home background code images */
+    #bg-code-top-center {
+        position: absolute;
+        z-index: -1;
+        top: 100px;
+        left: 725px;
+        
+        -webkit-animation: slideInFromTop 1s ease-out 0s 1;
+        -moz-animation: slideInFromTop 1s ease-out 0s 1;
+        -o-animation: slideInFromTop 1s ease-out 0s 1;
+        animation: slideInFromTop 1s ease-out 0s 1;
+    }
+    
+    #bg-code-bottom-right {
+        position: absolute;
+        z-index: -1;
+        top: 550px;
+        left: 1205px;
+    
+        -webkit-animation: slideInFromBottom 1s ease-out 0s 1;
+        -moz-animation: slideInFromBottom 1s ease-out 0s 1;
+        -o-animation: slideInFromBottom 1s ease-out 0s 1;
+        animation: slideInFromBottom 1s ease-out 0s 1;
+    }
+    
+    /* Skills background code images */
+    #bg-code-center {
+        position: absolute;
+        z-index: -1;
+        top: 1200px;
+        left: 725px;
+    }
+    
+    #bg-code-bottom-left {
+        position: absolute;
+        z-index: -1;
+        top: 975px;
+        left: 245px;
+    }
+    
+    /* Portfolio background code images */
+    #bg-code-port-top-right {
+        position: absolute;
+        z-index: -1;
+        top: 1500px;
+        left: 1205px;
+    }
+    
+    #bg-code-port-left {
+        position: absolute;
+        z-index: -1;
+        top: 2200px;
+        left: 245px;
+    }
+    
+    #bg-code-port-right {
+        position: absolute;
+        z-index: -1;
+        top: 2500px;
+        left: 1205px;
+    }
+    
+    #bg-code-port-center {
+        position: absolute;
+        z-index: -1;
+        top: 3000px;
+        left: 725px;
+    }
+    
+    /* Contact background code images */
+    #bg-code-cont-left {
+        position: absolute;
+        z-index: -1;
+        top: 3400px;
+        left: 245px;
+    }
+    #bg-code-cont-right {
+        position: absolute;
+        z-index: -1;
+        top: 3800px;
+        left: 1205px;
+    }
+
+}
+
+
+/* Medium Screens */
+@media(min-width: 901px) and (max-width: 1700px) {
+    
+    /* Overlap the title on the home image */
+    #page-title {
+        right: -150px;
+    }
+
+    /*
+     * Background code images 
+     */
+    /* Home background code images */
+    #bg-code-top-center {
+        position: absolute;
+        z-index: -1;
+        top: 100px;
+        left: 725px;
+        
+        -webkit-animation: slideInFromTop 1s ease-out 0s 1;
+        -moz-animation: slideInFromTop 1s ease-out 0s 1;
+        -o-animation: slideInFromTop 1s ease-out 0s 1;
+        animation: slideInFromTop 1s ease-out 0s 1;
+    }
+    
+    
+    #bg-code-bottom-right {
+        position: absolute;
+        z-index: -1;
+        top: 550px;
+        left: 245px; /* THIS */
+    
+        -webkit-animation: slideInFromBottom 1s ease-out 0s 1;
+        -moz-animation: slideInFromBottom 1s ease-out 0s 1;
+        -o-animation: slideInFromBottom 1s ease-out 0s 1;
+        animation: slideInFromBottom 1s ease-out 0s 1;
+    }
+    
+    /* Skills background code images */
+    #bg-code-center {
+        position: absolute;
+        z-index: -1;
+        top: 1200px;
+        left: 725px;
+    }
+    
+    #bg-code-bottom-left {
+        position: absolute;
+        z-index: -1;
+        top: 1500px; /* THIS */
+        left: 245px;
+    }
+    
+    /* Portfolio background code images */
+    #bg-code-port-top-right {
+
+        /* THIS */
+
+
+        display: none;
+    }
+    
+    #bg-code-port-left {
+        position: absolute;
+        z-index: -1;
+        top: 2200px;
+        left: 245px;
+    }
+    
+    #bg-code-port-right {
+
+        /* THIS */
+
+        display: none;
+    }
+    
+    #bg-code-port-center {
+        position: absolute;
+        z-index: -1;
+        top: 3000px;
+        left: 725px;
+    }
+    
+    /* Contact background code images */
+    #bg-code-cont-left {
+        position: absolute;
+        z-index: -1;
+        top: 3400px;
+        left: 245px;
+    }
+    #bg-code-cont-right {
+        position: absolute;
+        z-index: -1;
+        top: 3800px;
+        left: 725px; /* THIS */
+    }   
+}
+
+
+/* Small Screens */
 @media(max-width: 900px) {
     :root {
         --flex-direct: column;
@@ -26,17 +221,6 @@
     }
 }
 
-/*
- * Larger screens
- */
-@media(min-width: 901px) {
-    
-    /* Overlap the title on the home image */
-    #page-title {
-        right: -150px;
-    }
-}
-
 /* Set page margin and padding, fonts & background image */
 body {
     margin: 0;
@@ -44,90 +228,6 @@ body {
     color: white;
     font-family: "Montserrat", sans-serif;
     background-image: url(../images/background.jpg);
-}
-
-/*
- * Background code images 
- */
-/* Home background code images */
-#bg-code-top-center {
-    position: absolute;
-    top: 100px;
-    left: 725px;
-
-    -webkit-animation: slideInFromTop 1s ease-out 0s 1;
-    -moz-animation: slideInFromTop 1s ease-out 0s 1;
-    -o-animation: slideInFromTop 1s ease-out 0s 1;
-    animation: slideInFromTop 1s ease-out 0s 1;
-}
-
-#bg-code-bottom-right {
-    position: absolute;
-    top: 550px;
-    left: 1205px;
-
-    -webkit-animation: slideInFromBottom 1s ease-out 0s 1;
-    -moz-animation: slideInFromBottom 1s ease-out 0s 1;
-    -o-animation: slideInFromBottom 1s ease-out 0s 1;
-    animation: slideInFromBottom 1s ease-out 0s 1;
-}
-
-/* Skills background code images */
-#bg-code-center {
-    position: absolute;
-    z-index: -1;
-    top: 1200px;
-    left: 725px;
-}
-
-#bg-code-bottom-left {
-    position: absolute;
-    z-index: -1;
-    top: 975px;
-    left: 245px;
-}
-
-/* Portfolio background code images */
-#bg-code-port-top-right {
-    position: absolute;
-    z-index: -1;
-    top: 1500px;
-    left: 1205px;
-}
-
-#bg-code-port-left {
-    position: absolute;
-    z-index: -1;
-    top: 2200px;
-    left: 245px;
-}
-
-#bg-code-port-right {
-    position: absolute;
-    z-index: -1;
-    top: 2500px;
-    left: 1205px;
-}
-
-#bg-code-port-center {
-    position: absolute;
-    z-index: -1;
-    top: 3000px;
-    left: 725px;
-}
-
-/* Contact background code images */
-#bg-code-cont-left {
-    position: absolute;
-    z-index: -1;
-    top: 3400px;
-    left: 245px;
-}
-#bg-code-cont-right {
-    position: absolute;
-    z-index: -1;
-    top: 3800px;
-    left: 1205px;
 }
 
 /* 
