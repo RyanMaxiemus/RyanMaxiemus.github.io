@@ -3,6 +3,13 @@
 /* Variables */
 :root {
     --main-bg-color: #24252a;
+    --flex-direct: row;
+}
+
+@media(max-width: 900px) {
+    :root {
+        --flex-direct: column;
+    }
 }
 
 /* Set page margin and padding, fonts & background image */
@@ -449,7 +456,7 @@ body {
 
 #skills {
     display: flex;
-    flex-direction: row;
+    flex-direction: var(--flex-direct);
     justify-content: center;
     align-items: center;
 
@@ -542,7 +549,9 @@ body {
 
 #portfolio {
     display: flex;
+    flex-direction: var(--flex-direct);
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     
     margin-left: auto;
