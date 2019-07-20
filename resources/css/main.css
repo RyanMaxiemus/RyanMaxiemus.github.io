@@ -6,9 +6,34 @@
     --flex-direct: row;
 }
 
+
+/*
+ * Smaller screens
+ */
 @media(max-width: 900px) {
     :root {
         --flex-direct: column;
+    }
+
+    /* Remove home image */
+    #home-img {
+        display: none;
+    }
+
+    /* Remove navigation lines */
+    #nav-lines {
+        display: none;
+    }
+}
+
+/*
+ * Larger screens
+ */
+@media(min-width: 901px) {
+    
+    /* Overlap the title on the home image */
+    #page-title {
+        right: -150px;
     }
 }
 
@@ -416,7 +441,6 @@ body {
 
 #page-title {
     position: relative;
-    right: -150px;
 
     align-self: center;
 
