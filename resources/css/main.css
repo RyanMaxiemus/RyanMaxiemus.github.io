@@ -2,8 +2,14 @@
 
 /* Variables */
 :root {
-    --main-bg-color: #24252a;
-    --flex-direct: row;
+    --bgMainColor: #24252a;
+    --flexDirect: row;
+
+    /* BG Code Variables*/
+    --bgCodeLeftPlace1: 1205px;
+    --bgCodeLeftPlace2: ;
+    --bgCodeTopPlace1: 975px;
+    --bgCodeDisplay: inline;
 }
 
 /*
@@ -17,197 +23,31 @@
         right: -150px;
     }
 
-    /*
-     * Background code images 
-     */
-    /* Home background code images */
-    #bg-code-top-center {
-        position: absolute;
-        z-index: -1;
-        top: 100px;
-        left: 725px;
-        
-        -webkit-animation: slideInFromTop 1s ease-out 0s 1;
-        -moz-animation: slideInFromTop 1s ease-out 0s 1;
-        -o-animation: slideInFromTop 1s ease-out 0s 1;
-        animation: slideInFromTop 1s ease-out 0s 1;
-    }
-    
-    #bg-code-bottom-right {
-        position: absolute;
-        z-index: -1;
-        top: 550px;
-        left: 1205px;
-    
-        -webkit-animation: slideInFromBottom 1s ease-out 0s 1;
-        -moz-animation: slideInFromBottom 1s ease-out 0s 1;
-        -o-animation: slideInFromBottom 1s ease-out 0s 1;
-        animation: slideInFromBottom 1s ease-out 0s 1;
-    }
-    
-    /* Skills background code images */
-    #bg-code-center {
-        position: absolute;
-        z-index: -1;
-        top: 1200px;
-        left: 725px;
-    }
-    
-    #bg-code-bottom-left {
-        position: absolute;
-        z-index: -1;
-        top: 975px;
-        left: 245px;
-    }
-    
-    /* Portfolio background code images */
-    #bg-code-port-top-right {
-        position: absolute;
-        z-index: -1;
-        top: 1500px;
-        left: 1205px;
-    }
-    
-    #bg-code-port-left {
-        position: absolute;
-        z-index: -1;
-        top: 2200px;
-        left: 245px;
-    }
-    
-    #bg-code-port-right {
-        position: absolute;
-        z-index: -1;
-        top: 2500px;
-        left: 1205px;
-    }
-    
-    #bg-code-port-center {
-        position: absolute;
-        z-index: -1;
-        top: 3000px;
-        left: 725px;
-    }
-    
-    /* Contact background code images */
-    #bg-code-cont-left {
-        position: absolute;
-        z-index: -1;
-        top: 3400px;
-        left: 245px;
-    }
-    #bg-code-cont-right {
-        position: absolute;
-        z-index: -1;
-        top: 3800px;
-        left: 1205px;
-    }
-
 }
 
 
 /* Medium Screens */
 @media(min-width: 901px) and (max-width: 1700px) {
+
+    /* Variables for BG Code Images */
+    :root {
+        --bgCodeLeftPlace1: 245px;
+        --bgCodeLeftPlace2: 725px;
+        --bgCodeTopPlace1: 1500px;
+        --bgCodeDisplay: none;
+    }
     
     /* Overlap the title on the home image */
     #page-title {
         right: -150px;
     }
-
-    /*
-     * Background code images 
-     */
-    /* Home background code images */
-    #bg-code-top-center {
-        position: absolute;
-        z-index: -1;
-        top: 100px;
-        left: 725px;
-        
-        -webkit-animation: slideInFromTop 1s ease-out 0s 1;
-        -moz-animation: slideInFromTop 1s ease-out 0s 1;
-        -o-animation: slideInFromTop 1s ease-out 0s 1;
-        animation: slideInFromTop 1s ease-out 0s 1;
-    }
-    
-    
-    #bg-code-bottom-right {
-        position: absolute;
-        z-index: -1;
-        top: 550px;
-        left: 245px; /* THIS */
-    
-        -webkit-animation: slideInFromBottom 1s ease-out 0s 1;
-        -moz-animation: slideInFromBottom 1s ease-out 0s 1;
-        -o-animation: slideInFromBottom 1s ease-out 0s 1;
-        animation: slideInFromBottom 1s ease-out 0s 1;
-    }
-    
-    /* Skills background code images */
-    #bg-code-center {
-        position: absolute;
-        z-index: -1;
-        top: 1200px;
-        left: 725px;
-    }
-    
-    #bg-code-bottom-left {
-        position: absolute;
-        z-index: -1;
-        top: 1500px; /* THIS */
-        left: 245px;
-    }
-    
-    /* Portfolio background code images */
-    #bg-code-port-top-right {
-
-        /* THIS */
-
-
-        display: none;
-    }
-    
-    #bg-code-port-left {
-        position: absolute;
-        z-index: -1;
-        top: 2200px;
-        left: 245px;
-    }
-    
-    #bg-code-port-right {
-
-        /* THIS */
-
-        display: none;
-    }
-    
-    #bg-code-port-center {
-        position: absolute;
-        z-index: -1;
-        top: 3000px;
-        left: 725px;
-    }
-    
-    /* Contact background code images */
-    #bg-code-cont-left {
-        position: absolute;
-        z-index: -1;
-        top: 3400px;
-        left: 245px;
-    }
-    #bg-code-cont-right {
-        position: absolute;
-        z-index: -1;
-        top: 3800px;
-        left: 725px; /* THIS */
-    }   
 }
 
 
 /* Small Screens */
 @media(max-width: 900px) {
     :root {
-        --flex-direct: column;
+        --flexDirect: column;
     }
 
     /* Remove home image */
@@ -457,6 +297,96 @@ body {
     transform: translate3d(0px, 0px, 0px);
 }
 
+/*
+ * Background code images 
+ */
+/* Home background code images */
+#bg-code-top-center {
+    position: absolute;
+    z-index: -1;
+    top: 100px;
+    left: 725px;
+    
+    -webkit-animation: slideInFromTop 1s ease-out 0s 1;
+    -moz-animation: slideInFromTop 1s ease-out 0s 1;
+    -o-animation: slideInFromTop 1s ease-out 0s 1;
+    animation: slideInFromTop 1s ease-out 0s 1;
+}
+
+#bg-code-bottom-right {
+    position: absolute;
+    z-index: -1;
+    top: 550px;
+    left: var(--bgCodeLeftPlace1);
+
+    -webkit-animation: slideInFromBottom 1s ease-out 0s 1;
+    -moz-animation: slideInFromBottom 1s ease-out 0s 1;
+    -o-animation: slideInFromBottom 1s ease-out 0s 1;
+    animation: slideInFromBottom 1s ease-out 0s 1;
+}
+
+/* Skills background code images */
+#bg-code-center {
+    position: absolute;
+    z-index: -1;
+    top: 1200px;
+    left: 725px;
+}
+
+#bg-code-bottom-left {
+    position: absolute;
+    z-index: -1;
+    top: var(--bgCodeTopPlace1);
+    left: 245px;
+}
+
+/* Portfolio background code images */
+#bg-code-port-top-right {
+    display: var(--bgCodeDisplay);
+
+    position: absolute;
+    z-index: -1;
+    top: 1500px;
+    left: 1205px;
+}
+
+#bg-code-port-left {
+    position: absolute;
+    z-index: -1;
+    top: 2200px;
+    left: 245px;
+}
+
+#bg-code-port-right {
+    display: var(--bgCodeDisplay);
+
+    position: absolute;
+    z-index: -1;
+    top: 2500px;
+    left: 1205px;
+}
+
+#bg-code-port-center {
+    position: absolute;
+    z-index: -1;
+    top: 3000px;
+    left: 725px;
+}
+
+/* Contact background code images */
+#bg-code-cont-left {
+    position: absolute;
+    z-index: -1;
+    top: 3400px;
+    left: 245px;
+}
+#bg-code-cont-right {
+    position: absolute;
+    z-index: -1;
+    top: 3800px;
+    left: var(--bgCodeLeftPlace2);
+}
+
 /* 
  * Navigation Bar 
  */
@@ -580,7 +510,7 @@ body {
 
 #skills {
     display: flex;
-    flex-direction: var(--flex-direct);
+    flex-direction: var(--flexDirect);
     justify-content: center;
     align-items: center;
 
@@ -593,11 +523,11 @@ body {
     display: flex;
     flex-direction: column;
 
-    background-color: var(--main-bg-color);
+    background-color: var(--bgMainColor);
 
     border: white 1px solid;
     padding: 15px;
-    margin: 15px;
+    margin: 15px 3vw;
 }
 
 /* Progress Bars */
@@ -664,7 +594,9 @@ body {
     width: 65%;
 }
 
-/* Portfolio Section */
+/*
+ * Portfolio Section 
+ */
 #portfolio-title {
     position: relative;
     top: 900px;
@@ -673,7 +605,7 @@ body {
 
 #portfolio {
     display: flex;
-    flex-direction: var(--flex-direct);
+    flex-direction: var(--flexDirect);
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -688,13 +620,12 @@ body {
 }
 
 .portfolio-tile {
-    background-color: var(--main-bg-color);
+    background-color: var(--bgMainColor);
+    border: white 1px solid;
 
     width: 400px;
     height: auto;
-    margin: 0 15px 30px;
-
-    border: white 1px solid;
+    margin: 0 2vw 3vw;
 
     text-align: center;
 }
