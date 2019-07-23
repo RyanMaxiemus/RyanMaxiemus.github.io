@@ -268,7 +268,7 @@ body {
     }
 }
 
-/* Animations for skils and tools */
+/* Animations for skills and tools */
 .animation-element {
     position: relative;
 }
@@ -465,7 +465,7 @@ body {
     color: rgba(255, 255, 255, 0.4);
     font-size: 22px;
 
-    /* Transition out of transperency */
+    /* Transition out of transparency */
     -webkit-transition: color 1s ease-out;
     -moz-transition: color 1s ease-out;
     -o-transition: color 1s ease-out;
@@ -482,7 +482,7 @@ body {
 .nav-link > hr {
     border-color: rgba(255, 255, 255, 0);
 
-    /* Transition out of transperency */
+    /* Transition out of transparency */
     -webkit-transition: border-color 1s ease-out;
     -moz-transition: border-color 1s ease-out;
     -o-transition: border-color 1s ease-out;
