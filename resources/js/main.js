@@ -16,7 +16,7 @@ $(document).ready(function() {
 
         // Change color & background color of navbar.
         $(".nav-link").css("background-color", "var(--bgMainColor)");
-        $(".nav-link").css("background-color", "rgba(255, 255, 255, 1)");
+        $(".nav-link").css("color", "rgba(255, 255, 255, 1)");
 
 
         /*
