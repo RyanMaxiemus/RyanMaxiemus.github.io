@@ -9,7 +9,7 @@ $(document).ready(function() {
     if (isMobile) {
 
         // Change text & background color of navbar.
-        $(".nav-link").css("background-color", "blue"); // "var(--bgMainColor)");       // !FIX ME
+        $(".nav-link").css("background-color", "var(--bgMainColor)");
         $(".nav-link").css("color", "rgba(255, 255, 255, 1)");
 
         
