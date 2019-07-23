@@ -10,6 +10,10 @@
     --bgCodeTopPlace1: 975px;
     --bgCodeDisplay: inline;
 
+    /* Home */
+    --homeDisplay: flex;
+    --homeSectionTop: 230px;
+
     /* Skills */
     --skillsTitleTop: 500px;
     --skillsSectionTop: 600px;
@@ -22,6 +26,7 @@
     --portTileWidth: 400px;
     --portLRMargin: 2vw;
     --portTBMargin: 4vw;
+    --portWikiImgHeight: 326px;
 
     /* Contact */
     --contTitleTop: 1300px;
@@ -75,7 +80,11 @@
         /* BG Code Images */
         --bgCodeDisplay: none;
 
-        /* Skills & */
+        /* Home */
+        --homeDisplay: inline;
+        --homeSectionTop: 300px;
+
+        /* Skills */
         --flexDirect: column;
         --skillsTitleTop: 700px;
         --skillsSectionTop: 725px;
@@ -88,6 +97,7 @@
         --portTileWidth: 85%;
         --portLRMargin: 0;
         --portTBMargin: 50px;
+        --portWikiImgHeight: 250px;
 
         /* Contact */
         --contTitleTop: 1075px;
@@ -529,12 +539,13 @@ body {
  * Home Section 
  */
 #home {
-    display: flex;
+    display: var(--homeDisplay);
     justify-content: center;
 
     position: relative;
-    top: 230px;
-
+    
+    top: var(--homeSectionTop);
+    
     height: 500px;
 }
 
@@ -542,9 +553,9 @@ body {
     position: relative;
 
     text-align: center;
-
+    
     align-self: center;
-
+    
     -webkit-animation: slideInFromLeft 1s ease-out 0s 1;
     -moz-animation: slideInFromLeft 1s ease-out 0s 1;
     -o-animation: slideInFromLeft 1s ease-out 0s 1;
@@ -701,7 +712,7 @@ body {
 }
 
 #wikipedia-viewer-img {
-    height: 326px;
+    height: var(--portWikiImgHeight);
 }
 
 .portfolio-tile > a {
