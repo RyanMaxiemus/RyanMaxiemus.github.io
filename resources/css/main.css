@@ -115,6 +115,7 @@
 body {
     margin: 0;
     padding: 0;
+    max-width: 95vw;
     color: white;
     font-family: "Montserrat", sans-serif;
     background-image: url(../images/background.jpg);
@@ -533,6 +534,8 @@ body {
 
     position: relative;
     top: 230px;
+
+    height: 500px;
 }
 
 #page-title {

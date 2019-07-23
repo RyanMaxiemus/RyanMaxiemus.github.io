@@ -6,48 +6,110 @@ $(document).ready(function() {
      */
     console.clear();
 
+    // Check if the page is being viewed on a mobile device.
+    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
     /*
-     * Scroll on navigation link click methods.
+     * For a mobile device.
      */
-    // Scroll to home section when link is clicked.
-    $("#home-link").click(function() {
-        $("html, body").animate(
-            {
-                scrollTop: $("#home").offset().top - 230
-            },
-            1000
-        );
-    });
+    if (isMobile) {
 
-    // Scroll to skills section when link is clicked.
-    $("#skills-link").click(function() {
-        $("html, body").animate(
-            {
-                scrollTop: $("#skills").offset().top - 300
-            },
-            1000
-        );
-    });
+        // Change color & background color of navbar.
+        $(".nav-link").css("background-color", "var(--bgMainColor)");
+        $(".nav-link").css("background-color", "rgba(255, 255, 255, 1)");
 
-    // Scroll to portfolio section when link is clicked.
-    $("#portfolio-link").click(function() {
-        $("html, body").animate(
-            {
-                scrollTop: $("#portfolio").offset().top - 300
-            },
-            1000
-        );
-    });
 
-    // Scroll to portfolio section when link is clicked.
-    $("#contact-link").click(function() {
-        $("html, body").animate(
-            {
-                scrollTop: $("#contact").offset().top - 400
-            },
-            1000
-        );
-    });
+        /*
+         * Scroll on navigation link click.
+         */
+        // Scroll to home section when link is clicked.
+        $("#home-link").click(function() {
+            $("html, body").animate(
+                {
+                    scrollTop: $("#home").offset().top - 230
+                },
+                1000
+            );
+        });
+
+        // Scroll to skills section when link is clicked.
+        $("#skills-link").click(function() {
+            $("html, body").animate(
+                {
+                    scrollTop: $("#skills").offset().top - 125
+                },
+                1000
+            );
+        });
+
+        // Scroll to portfolio section when link is clicked.
+        $("#portfolio-link").click(function() {
+            $("html, body").animate(
+                {
+                    scrollTop: $("#portfolio").offset().top - 125
+                },
+                1000
+            );
+        });
+
+        // Scroll to portfolio section when link is clicked.
+        $("#contact-link").click(function() {
+            $("html, body").animate(
+                {
+                    scrollTop: $("#contact").offset().top
+                },
+                1000
+            );
+        });
+    }
+    /*
+     * For a non-mobile device.
+     */
+    else {
+
+        /*
+         * Scroll on navigation link click.
+         */
+        // Scroll to home section when link is clicked.
+        $("#home-link").click(function() {
+            $("html, body").animate(
+                {
+                    scrollTop: $("#home").offset().top - 230
+                },
+                1000
+            );
+        });
+
+        // Scroll to skills section when link is clicked.
+        $("#skills-link").click(function() {
+            $("html, body").animate(
+                {
+                    scrollTop: $("#skills").offset().top - 300
+                },
+                1000
+            );
+        });
+
+        // Scroll to portfolio section when link is clicked.
+        $("#portfolio-link").click(function() {
+            $("html, body").animate(
+                {
+                    scrollTop: $("#portfolio").offset().top - 300
+                },
+                1000
+            );
+        });
+
+        // Scroll to portfolio section when link is clicked.
+        $("#contact-link").click(function() {
+            $("html, body").animate(
+                {
+                    scrollTop: $("#contact").offset().top - 400
+                },
+                1000
+            );
+        });
+    }
 
     /*
      * Animate items while scrolling.
@@ -119,17 +181,6 @@ $(document).ready(function() {
                     $element.addClass("in-view");
                 }
             }
-            // REMOVE THIS
-            // REMOVE THIS
-            // REMOVE THIS
-            // REMOVE THIS
-            else {
-                $element.removeClass("in-view");
-            }
-            // REMOVE THIS
-            // REMOVE THIS
-            // REMOVE THIS
-            // REMOVE THIS
         });
     }
 
