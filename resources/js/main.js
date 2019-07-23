@@ -174,7 +174,7 @@ $(document).ready(function() {
                         setTimeout(function() {
                             children[i].classList.add("in-view");
                         }, time);
-                        time += 40;
+                        time += 100;
                     }
                 } else {
                     // Add in-view class to the element
