@@ -6,19 +6,18 @@ $(document).ready(function() {
     /*
      * For a mobile device.
      */
-    /*                                                                      // !FIX THIS
     if (isMobile) {
 
-        // Change color & background color of navbar.
-        $(".nav-link").css("background-color", "var(--bgMainColor)");
+        // Change text & background color of navbar.
+        $(".nav-link").css("background-color", "blue"); // "var(--bgMainColor)");       // !FIX ME
         $(".nav-link").css("color", "rgba(255, 255, 255, 1)");
 
+        
 
         /*
          * Scroll on navigation link click.
          */
         // Scroll to home section when link is clicked.
-        /*                                                                   // !FIX THIS
         $("#home-link").click(function() {
             $("html, body").animate(
                 {
@@ -61,7 +60,6 @@ $(document).ready(function() {
     /*
      * For a non-mobile device.
      */ 
-    /*                                                                      // !FIX THIS
     else {
 
         /*
@@ -106,7 +104,7 @@ $(document).ready(function() {
                 1000
             );
         });
-    //}                                                                      // !FIX THIS
+    }
 
     /*
      * Animate items while scrolling.
