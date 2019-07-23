@@ -1,10 +1,4 @@
 $(document).ready(function() {
-    /*
-     *
-     * REMOVE THIS TEST CLEAR
-     *
-     */
-    console.clear();
 
     // Check if the page is being viewed on a mobile device.
     var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
@@ -115,8 +109,8 @@ $(document).ready(function() {
      * Animate items while scrolling.
      */
     // Variables
-    let $animationElements = $(".animation-element");
     let $window = $(window);
+    let $animationElements = $(".animation-element");
     let scrolling = false;
 
     // Add event listener for scroll & resize.
@@ -124,7 +118,7 @@ $(document).ready(function() {
         scrolling = true;
     });
 
-    // Fire function after a timeout to not overload page
+    // Fire function after a timeout to not overload page.
     setInterval(function() {
         if (scrolling) {
             scrolling = false;
@@ -133,15 +127,12 @@ $(document).ready(function() {
     }, 250);
 
     // Trigger a scroll event when page is loaded.
-    $window.trigger("scroll");
+    $(window).trigger("scroll");
 
     // When the page is scrolled execute these methods.
     function onPageScroll() {
-        let elem = document.querySelector("body");
-        let bounding = elem.getBoundingClientRect();
-
         // Fix the navigation lines.
-        fixNavLines(bounding.top);
+        fixNavLines(window.scrollY);
 
         // Check if an element is in view
         checkIfInView();
@@ -150,39 +141,28 @@ $(document).ready(function() {
     // Check to see if an element that needs to be animated is in view.
     function checkIfInView() {
         let windowHeight = $window.height();
-        let windowTopPosition = $window.scrollTop();
-        let windowBottomPosition = $window.scrollTop() + windowHeight;
+        let windowTop = $window.scrollTop();
+        let windowBottom = windowTop + windowHeight;
 
         $.each($animationElements, function() {
             let $element = $(this);
-            let elementHeight = $element.height();
-            let elementTopPosition = $element.offset().top;
-            let elementBottomPosition = elementTopPosition + elementHeight;
+            let eHeight = $element.height();
+            let eTop = $element.offset().top;
+            let eBottom = eTop + eHeight;
+
 
             // Check to see if this element is in view.
-            if (
-                elementBottomPosition >= windowTopPosition &&
-                elementTopPosition <= windowBottomPosition
-            ) {
-                // If the element is a portfolio tile, delay animation.
-                if ($element.hasClass("portfolio-tile")) {
-                    let children = document.getElementById("portfolio")
-                        .children;
-                    let time = 0;
-
-                    for (let i = 0; i < children.length; i++) {
-                        setTimeout(function() {
-                            children[i].classList.add("in-view");
-                        }, time);
-                        time += 100;
-                    }
-                } else {
-                    // Add in-view class to the element
+            if ( eBottom >= windowTop && eTop <= windowBottom ) {
+                if($element.hasClass("portfolio-tile")) {
+                    $element.addClass("in-view");
+                }
+                else {
                     $element.addClass("in-view");
                 }
             }
         });
     }
+    
 
     function fixNavLines(top) {
         let eleArr = [
@@ -196,11 +176,11 @@ $(document).ready(function() {
             eleArr[i].classList.remove("active");
         }
 
-        if (top > -513) {
+        if (top < 455) {
             document.getElementById("home-line").classList.add("active");
-        } else if (top <= -513 && top >= -1350) {
+        } else if (top >= 455 && top <= 1200) {
             document.getElementById("skills-line").classList.add("active");
-        } else if (top < -1350 && top >= -2820) {
+        } else if (top > 1200 && top <= 2820) {
             document.getElementById("portfolio-line").classList.add("active");
         } else {
             document.getElementById("contact-line").classList.add("active");
