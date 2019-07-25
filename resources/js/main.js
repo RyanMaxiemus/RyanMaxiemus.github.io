@@ -50,7 +50,7 @@ $(document).ready(function() {
         $("#contact-link").click(function() {
             $("html, body").animate(
                 {
-                    scrollTop: $("#contact").offset().top
+                    scrollTop: $("#contact").offset().top - 100
                 },
                 1000
             );
@@ -99,7 +99,7 @@ $(document).ready(function() {
         $("#contact-link").click(function() {
             $("html, body").animate(
                 {
-                    scrollTop: $("#contact").offset().top - 400
+                    scrollTop: $("#contact").offset().top - 100
                 },
                 1000
             );

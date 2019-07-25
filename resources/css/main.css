@@ -12,11 +12,14 @@
 
     /* Home */
     --homeDisplay: flex;
-    --homeSectionTop: 230px;
+    --homeSectionTop: 25vh;
+    --homeTitleFontSize: 4vw;
+    --homeTitleSubFontSize: 1.5vw;
 
     /* Skills */
     --skillsTitleTop: 500px;
     --skillsSectionTop: 600px;
+    --skillsBoxTitleFontSize: 28px;
     --skillsWidth: 375px;
     --skillsHeight: 43px;
     --skillsFontSize: 18px;
@@ -54,9 +57,11 @@
 
 
 /* Medium Screens */
+/*                                                          !FIX ME!
 @media(min-width: 901px) and (max-width: 1700px) {
 
     /* Variables for BG Code Images */
+    /*                                                      !FIX ME!
     :root {
         --bgCodeLeftPlace: 245px;
         --bgCodeTopPlace1: 1500px;
@@ -64,9 +69,35 @@
     }
     
     /* Overlap the title on the home image */
+    /*                                                      !FIX ME!
     #page-title {
         right: -150px;
     }
+}   
+*/
+
+@media(min-width: 901px) and (max-width: 1030px) {
+
+    /* Variables */
+    :root {
+        /* BG Code Images */
+        --bgCodeDisplay: none;
+        --bgCodeLeftPlace: 245px;
+        --bgCodeTopPlace1: 1500px;
+        
+        /* Skills */
+        /*
+        --skillsWidth: ;
+        --skillsHeight: ;
+        --skillsFontSize: 18px;
+        */
+    }
+    
+    /* Overlap the title on the home image */
+    #page-title {
+        right: -105px;
+    }
+
 }
 
 
@@ -82,7 +113,8 @@
 
         /* Home */
         --homeDisplay: inline;
-        --homeSectionTop: 300px;
+        --homeTitleFontSize: 66px;
+        --homeTitleSubFontSize: 22px;
 
         /* Skills */
         --flexDirect: column;
@@ -247,7 +279,7 @@ body {
         width: 0;
     }
     100% {
-        width: 900px;
+        width: 50vw;
     }
 }
 
@@ -256,7 +288,7 @@ body {
         width: 0;
     }
     100% {
-        width: 900px;
+        width: 50vw;
     }
 }
 
@@ -265,7 +297,7 @@ body {
         width: 0;
     }
     100% {
-        width: 900px;
+        width: 50vw;
     }
 }
 
@@ -274,7 +306,7 @@ body {
         width: 0;
     }
     100% {
-        width: 900px;
+        width: 50vw;
     }
 }
 
@@ -507,7 +539,7 @@ body {
  * Navigation Lines 
  */
 #nav-lines {
-    align-self: center;
+    top: 45vh;
 
     position: fixed;
     left: 15px;
@@ -552,9 +584,10 @@ body {
 #page-title {
     position: relative;
 
+    top: 20vh;
+
     text-align: center;
     
-    align-self: center;
     
     -webkit-animation: slideInFromLeft 1s ease-out 0s 1;
     -moz-animation: slideInFromLeft 1s ease-out 0s 1;
@@ -564,7 +597,7 @@ body {
 
 #home-img {
     margin-left: 60px;
-    width: 900px;
+    width: 50vw;
 
     -webkit-animation: grow 1s ease-out 0s 1;
     -moz-animation: grow 1s ease-out 0s 1;
@@ -573,12 +606,12 @@ body {
 }
 
 #page-title > h1 {
-    font-size: 66px;
+    font-size: var(--homeTitleFontSize);
 }
 
 #page-title > p {
     text-align: center;
-    font-size: 22px;
+    font-size: var(--homeTitleSubFontSize);
 }
 
 /* 
@@ -610,6 +643,14 @@ body {
     border: white 1px solid;
     padding: 15px;
     margin: 15px 3vw;
+}
+
+#dev-skills > h2,
+#dev-tools > h2 {
+    font-size: var(--skillsBoxTitleFontSize);
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 20px;
 }
 
 /* Progress Bars */
