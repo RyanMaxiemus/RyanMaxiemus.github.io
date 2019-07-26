@@ -23,13 +23,19 @@
     --skillsWidth: 375px;
     --skillsHeight: 43px;
     --skillsFontSize: 18px;
+    --skillsSpanMarginTop: 0;
+    --skillsListMarginBottom: 27px;
+    --skillsBoxTitleMarginTop: 20px;
+    --skillsBoxTitleMarginBottom: 40px;
+    --skillsPaddingBottom: 15px;
 
     /* Portfolio */
+    --portTitleTop: 900px;
     --portSectionTop: 1000px;
-    --portTileWidth: 400px;
+    --portTileWidth: 25vw;
     --portLRMargin: 2vw;
     --portTBMargin: 4vw;
-    --portWikiImgHeight: 326px;
+    --portTileFontSize: 28px;
 
     /* Contact */
     --contTitleTop: 1300px;
@@ -39,7 +45,7 @@
     --socialLRMargin: 30px;
 
     /* Footer */
-    --footerTop: 1300px;
+    --footerTop: 1400px;
 }
 
 /*
@@ -47,7 +53,6 @@
  */
 /* Large Screens */
 @media(min-width: 1700px) {
-    
     /* Overlap the title on the home image */
     #page-title {
         right: -150px;
@@ -86,11 +91,29 @@
         --bgCodeTopPlace1: 1500px;
         
         /* Skills */
-        /*
-        --skillsWidth: ;
-        --skillsHeight: ;
-        --skillsFontSize: 18px;
-        */
+        --skillsTitleTop: 200px;
+        --skillsSectionTop: 250px;
+        --skillsWidth: 250px;
+        --skillsHeight: 26px;
+        --skillsFontSize: 14px;
+        --skillsBoxTitleFontSize: 22px;
+        --skillsSpanMarginTop: -8px;
+        --skillsListMarginBottom: 20px;
+        --skillsBoxTitleMarginTop: 10px;
+        --skillsBoxTitleMarginBottom: 20px;
+        --skillsPaddingBottom: 0;
+
+        /* Portfolio */
+        --portTitleTop: 400px;
+        --portSectionTop: 450px;
+        --portTileFontSize: 22px;
+
+        /* Contact */
+        --contTitleTop: 550px;
+        --contSectionTop: 600px;
+
+        /* Footer */
+        --footerTop: 550px;
     }
     
     /* Overlap the title on the home image */
@@ -641,7 +664,7 @@ body {
     background-color: var(--bgMainColor);
 
     border: white 1px solid;
-    padding: 15px;
+    padding: 15px 15px var(--skillsPaddingBottom);
     margin: 15px 3vw;
 }
 
@@ -649,8 +672,8 @@ body {
 #dev-tools > h2 {
     font-size: var(--skillsBoxTitleFontSize);
     text-align: center;
-    margin-bottom: 40px;
-    margin-top: 20px;
+    margin-top: var(--skillsBoxTitleMarginTop);
+    margin-bottom: var(--skillsBoxTitleMarginBottom);
 }
 
 /* Progress Bars */
@@ -668,11 +691,12 @@ body {
     line-height: 43px;
     background: #46484c;
     border-radius: 5px;
-    margin: 0 0 27px;
+    margin: 0 0 var(--skillsListMarginBottom);
 }
 
 #dev-tools ul li span,
 #dev-skills ul li span {
+    margin-top: var(--skillsSpanMarginTop);
     background: #4b323f;
     color: #fff;
     text-transform: uppercase;
@@ -721,7 +745,7 @@ body {
  */
 #portfolio-title {
     position: relative;
-    top: 900px;
+    top: var(--portTitleTop);
     text-align: center;
 }
 
@@ -735,7 +759,7 @@ body {
     margin-left: auto;
     margin-right: auto;
 
-    max-width: 1000px;
+    max-width: 95vw;
 
     position: relative;
     top: var(--portSectionTop);
@@ -750,10 +774,6 @@ body {
     margin: 0 var(--portLRMargin) var(--portTBMargin);
 
     text-align: center;
-}
-
-#wikipedia-viewer-img {
-    height: var(--portWikiImgHeight);
 }
 
 .portfolio-tile > a {
@@ -772,6 +792,7 @@ body {
 
 .portfolio-tile-title > h4 {
     margin-top: 15px;
+    font-size: var(--portTileFontSize);
 }
 
 /* 
