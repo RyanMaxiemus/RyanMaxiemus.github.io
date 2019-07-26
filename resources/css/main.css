@@ -11,14 +11,10 @@
     --bgCodeDisplay: inline;
 
     /* Home */
-    --homeDisplay: flex;
-    --homeSectionTop: 25vh;
     --homeTitleFontSize: 4vw;
     --homeTitleSubFontSize: 1.5vw;
 
     /* Skills */
-    --skillsTitleTop: 500px;
-    --skillsSectionTop: 600px;
     --skillsBoxTitleFontSize: 28px;
     --skillsWidth: 375px;
     --skillsHeight: 43px;
@@ -27,60 +23,19 @@
     --skillsListMarginBottom: 27px;
     --skillsBoxTitleMarginTop: 20px;
     --skillsBoxTitleMarginBottom: 40px;
-    --skillsPaddingBottom: 15px;
 
     /* Portfolio */
-    --portTitleTop: 900px;
-    --portSectionTop: 1000px;
     --portTileWidth: 25vw;
-    --portLRMargin: 2vw;
-    --portTBMargin: 4vw;
     --portTileFontSize: 28px;
-
-    /* Contact */
-    --contTitleTop: 1300px;
-    --contSectionTop: 1400px;
+    --portBottomMargin: 3%;
 
     /* Social Links */
     --socialLRMargin: 30px;
-
-    /* Footer */
-    --footerTop: 1400px;
 }
 
 /*
  * Media Queries
  */
-/* Large Screens */
-@media(min-width: 1700px) {
-    /* Overlap the title on the home image */
-    #page-title {
-        right: -150px;
-    }
-
-}
-
-
-/* Medium Screens */
-/*                                                          !FIX ME!
-@media(min-width: 901px) and (max-width: 1700px) {
-
-    /* Variables for BG Code Images */
-    /*                                                      !FIX ME!
-    :root {
-        --bgCodeLeftPlace: 245px;
-        --bgCodeTopPlace1: 1500px;
-        --bgCodeDisplay: none;
-    }
-    
-    /* Overlap the title on the home image */
-    /*                                                      !FIX ME!
-    #page-title {
-        right: -150px;
-    }
-}   
-*/
-
 @media(min-width: 901px) and (max-width: 1030px) {
 
     /* Variables */
@@ -91,8 +46,6 @@
         --bgCodeTopPlace1: 1500px;
         
         /* Skills */
-        --skillsTitleTop: 200px;
-        --skillsSectionTop: 250px;
         --skillsWidth: 250px;
         --skillsHeight: 26px;
         --skillsFontSize: 14px;
@@ -101,26 +54,13 @@
         --skillsListMarginBottom: 20px;
         --skillsBoxTitleMarginTop: 10px;
         --skillsBoxTitleMarginBottom: 20px;
-        --skillsPaddingBottom: 0;
 
         /* Portfolio */
-        --portTitleTop: 400px;
-        --portSectionTop: 450px;
         --portTileFontSize: 22px;
-
-        /* Contact */
-        --contTitleTop: 550px;
-        --contSectionTop: 600px;
 
         /* Footer */
         --footerTop: 550px;
     }
-    
-    /* Overlap the title on the home image */
-    #page-title {
-        right: -105px;
-    }
-
 }
 
 
@@ -135,28 +75,22 @@
         --bgCodeDisplay: none;
 
         /* Home */
-        --homeDisplay: inline;
         --homeTitleFontSize: 66px;
         --homeTitleSubFontSize: 22px;
 
         /* Skills */
         --flexDirect: column;
-        --skillsTitleTop: 700px;
-        --skillsSectionTop: 725px;
         --skillsWidth: 95%;
         --skillsHeight: 15%;
         --skillsFontSize: 14px;
+        --skillsSpanMarginTop: 0;
+        --skillsListMarginBottom: 20px;
+        --skillsBoxTitleMarginTop: 10px;
+        --skillsBoxTitleMarginBottom: 20px;
 
         /* Portfolio */
-        --portSectionTop: 935px;
         --portTileWidth: 85%;
-        --portLRMargin: 0;
-        --portTBMargin: 50px;
-        --portWikiImgHeight: 250px;
-
-        /* Contact */
-        --contTitleTop: 1075px;
-        --contSectionTop: 1130px;
+        --portBottomMargin: 30px;
 
         /* Social Links */
         --socialLRMargin: 20px;
@@ -396,11 +330,11 @@ body {
     -o-transition: all 500ms linear;
     transition: all 500ms linear;
 
-    -moz-transform: translate3d(0px, 400px, 0px);
-    -webkit-transform: translate3d(0px, 400px, 0px);
-    -o-transform: translate(0px, 400px);
-    -ms-transform: translate(0px, 400px);
-    transform: translate3d(0px, 400px, 0px);
+    -moz-transform: translate3d(0px, 300px, 0px);
+    -webkit-transform: translate3d(0px, 300px, 0px);
+    -o-transform: translate(0px, 300px);
+    -ms-transform: translate(0px, 300px);
+    transform: translate3d(0px, 300px, 0px);
 }
 
 .animation-element.slide-up.in-view {
@@ -562,8 +496,6 @@ body {
  * Navigation Lines 
  */
 #nav-lines {
-    top: 45vh;
-
     position: fixed;
     left: 15px;
 }
@@ -594,23 +526,20 @@ body {
  * Home Section 
  */
 #home {
-    display: var(--homeDisplay);
+    display: flex;
     justify-content: center;
+    align-items: center;
 
     position: relative;
     
-    top: var(--homeSectionTop);
-    
-    height: 500px;
+    height: 100vh;
 }
 
 #page-title {
-    position: relative;
-
-    top: 20vh;
+    z-index: 2;
 
     text-align: center;
-    
+    margin-right: -5%;
     
     -webkit-animation: slideInFromLeft 1s ease-out 0s 1;
     -moz-animation: slideInFromLeft 1s ease-out 0s 1;
@@ -619,7 +548,8 @@ body {
 }
 
 #home-img {
-    margin-left: 60px;
+    z-index: 1;
+
     width: 50vw;
 
     -webkit-animation: grow 1s ease-out 0s 1;
@@ -641,8 +571,7 @@ body {
  * Skills Section 
  */
 #skills-title {
-    position: relative;
-    top: var(--skillsTitleTop);
+    margin-top: 5%;
     text-align: center;
 }
 
@@ -652,8 +581,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    position: relative;
-    top: var(--skillsSectionTop);
+    margin-top: 5%;
 }
 
 #dev-skills,
@@ -664,7 +592,7 @@ body {
     background-color: var(--bgMainColor);
 
     border: white 1px solid;
-    padding: 15px 15px var(--skillsPaddingBottom);
+    padding: 15px 15px 0;
     margin: 15px 3vw;
 }
 
@@ -744,8 +672,7 @@ body {
  * Portfolio Section 
  */
 #portfolio-title {
-    position: relative;
-    top: var(--portTitleTop);
+    margin-top: 20%;
     text-align: center;
 }
 
@@ -755,25 +682,21 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    
-    margin-left: auto;
-    margin-right: auto;
 
-    max-width: 95vw;
+    width: 99vw;
 
-    position: relative;
-    top: var(--portSectionTop);
+    margin: 5% auto 0 auto;
 }
 
 .portfolio-tile {
     background-color: var(--bgMainColor);
     border: white 1px solid;
+    
+    text-align: center;
 
     width: var(--portTileWidth);
     height: auto;
-    margin: 0 var(--portLRMargin) var(--portTBMargin);
-
-    text-align: center;
+    margin: 0 1.5% var(--portBottomMargin);
 }
 
 .portfolio-tile > a {
@@ -799,8 +722,7 @@ body {
  * Contact Section
  */
 #contact-title {
-    position: relative;
-    top: var(--contTitleTop);
+    margin-top: 20%;
     text-align: center;
 }
 
@@ -810,24 +732,20 @@ body {
     justify-content: center;
     align-items: center;
 
-    margin: 0 20px;
+    margin-top: 5%;
 
     text-align: center;
-
-    position: relative;
-    top: var(--contSectionTop);
-    padding-bottom: 300px;
 }
 
 #contact > a {
     color: white;
     font-weight: bold;
-    margin-top: 75px;
+    margin-top: 5%;
     font-size: 22px;
 }
 
 .social-links {
-    margin-top: 75px;
+    margin-top: 5%;
 }
 
 .social-links > a {
@@ -853,7 +771,6 @@ body {
 
 /* Footer */
 footer {
-    position: relative;
-    top: var(--footerTop);
+    margin-top: 15%;
     text-align: center;
 }
