@@ -59,9 +59,9 @@ $(document).ready(function() {
         // Populate page with skills and portfolio tiles.
         checkIfInView(false);
     } else {
-    /*
-     * For a non-mobile device.
-     */
+        /*
+         * For a non-mobile device.
+         */
         /*
          * Scroll on navigation link click.
          */
@@ -131,6 +131,9 @@ $(document).ready(function() {
 
             // Check if an element is in view
             checkIfInView(true);
+
+            console.log(screen.availWidth);
+            console.log($window.scrollTop());
         }
     }
 
@@ -173,14 +176,30 @@ $(document).ready(function() {
             eleArr[i].classList.remove("active");
         }
 
-        if (top < 455) {
-            document.getElementById("home-line").classList.add("active");
-        } else if (top >= 455 && top <= 1200) {
-            document.getElementById("skills-line").classList.add("active");
-        } else if (top > 1200 && top <= 2820) {
-            document.getElementById("portfolio-line").classList.add("active");
+        if (screen.width > 1024) {
+            if (top < 455) {
+                document.getElementById("home-line").classList.add("active");
+            } else if (top >= 455 && top <= 1200) {
+                document.getElementById("skills-line").classList.add("active");
+            } else if (top > 1200 && top <= 2820) {
+                document
+                    .getElementById("portfolio-line")
+                    .classList.add("active");
+            } else {
+                document.getElementById("contact-line").classList.add("active");
+            }
         } else {
-            document.getElementById("contact-line").classList.add("active");
+            if (top < 300) {
+                document.getElementById("home-line").classList.add("active");
+            } else if (top >= 300 && top <= 912) {
+                document.getElementById("skills-line").classList.add("active");
+            } else if (top > 912 && top <= 1750) {
+                document
+                    .getElementById("portfolio-line")
+                    .classList.add("active");
+            } else {
+                document.getElementById("contact-line").classList.add("active");
+            }
         }
     }
 });
