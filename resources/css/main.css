@@ -431,7 +431,7 @@ body {
     
     position: absolute;
     z-index: -1;
-    top: 3000px;
+    top: 2800px;
     left: 725px;
 }
 
@@ -441,7 +441,7 @@ body {
     
     position: absolute;
     z-index: -1;
-    top: 3400px;
+    top: 2800px;
     left: 245px;
 }
 #bg-code-cont-right {
@@ -771,6 +771,6 @@ body {
 
 /* Footer */
 footer {
-    margin-top: 15%;
+    margin-top: 10%;
     text-align: center;
 }
