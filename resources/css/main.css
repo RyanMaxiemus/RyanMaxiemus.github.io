@@ -36,15 +36,14 @@
 /*
  * Media Queries
  */
-@media(min-width: 901px) and (max-width: 1280px) {
-
+@media (min-width: 901px) and (max-width: 1280px) {
     /* Variables */
     :root {
         /* BG Code Images */
         --bgCodeDisplay: none;
         --bgCodeLeftPlace: 245px;
         --bgCodeTopPlace1: 1500px;
-        
+
         /* Skills */
         --skillsWidth: 250px;
         --skillsHeight: 26px;
@@ -63,10 +62,8 @@
     }
 }
 
-
 /* Small Screens */
-@media(max-width: 900px) {
-
+@media (max-width: 900px) {
     /*
      * Variables 
      */
@@ -353,12 +350,12 @@ body {
 /* Home background code images */
 #bg-code-top-center {
     display: var(--bgCodeDisplay);
-    
+
     position: absolute;
     z-index: -1;
     top: 100px;
     left: 725px;
-    
+
     -webkit-animation: slideInFromTop 1s ease-out 0s 1;
     -moz-animation: slideInFromTop 1s ease-out 0s 1;
     -o-animation: slideInFromTop 1s ease-out 0s 1;
@@ -367,7 +364,7 @@ body {
 
 #bg-code-bottom-right {
     display: var(--bgCodeDisplay);
-    
+
     position: absolute;
     z-index: -1;
     top: 550px;
@@ -382,7 +379,7 @@ body {
 /* Skills background code images */
 #bg-code-center {
     display: var(--bgCodeDisplay);
-    
+
     position: absolute;
     z-index: -1;
     top: 1200px;
@@ -391,7 +388,7 @@ body {
 
 #bg-code-bottom-left {
     display: var(--bgCodeDisplay);
-    
+
     position: absolute;
     z-index: -1;
     top: var(--bgCodeTopPlace1);
@@ -410,7 +407,7 @@ body {
 
 #bg-code-port-left {
     display: var(--bgCodeDisplay);
-    
+
     position: absolute;
     z-index: -1;
     top: 2200px;
@@ -428,7 +425,7 @@ body {
 
 #bg-code-port-center {
     display: var(--bgCodeDisplay);
-    
+
     position: absolute;
     z-index: -1;
     top: 2800px;
@@ -438,15 +435,15 @@ body {
 /* Contact background code images */
 #bg-code-cont-left {
     display: var(--bgCodeDisplay);
-    
+
     position: absolute;
     z-index: -1;
-    top: 2800px;
+    top: 2900px;
     left: 245px;
 }
 #bg-code-cont-right {
     display: var(--bgCodeDisplay);
-    
+
     position: absolute;
     z-index: -1;
     top: 3800px;
@@ -531,7 +528,7 @@ body {
     align-items: center;
 
     position: relative;
-    
+
     height: 100vh;
 }
 
@@ -540,7 +537,7 @@ body {
 
     text-align: center;
     margin-right: -5%;
-    
+
     -webkit-animation: slideInFromLeft 1s ease-out 0s 1;
     -moz-animation: slideInFromLeft 1s ease-out 0s 1;
     -o-animation: slideInFromLeft 1s ease-out 0s 1;
@@ -691,7 +688,7 @@ body {
 .portfolio-tile {
     background-color: var(--bgMainColor);
     border: white 1px solid;
-    
+
     text-align: center;
 
     width: var(--portTileWidth);
