@@ -357,7 +357,7 @@
 
         <!-- Footer -->
         <footer>
-            <p>© 2022 <a href="https://RyanMaxiemus.GitHub.io/">Ryan Maxie</a></p>
+            <p>© <?php date("Y"); ?> <a href="https://RyanMaxiemus.GitHub.io/">Ryan Maxie</a></p>
         </footer>
 
         <!-- jQuery Library -->
